@@ -1,0 +1,51 @@
+
+.project-card {
+    font-family: "Lucida Console", Courier, monospace;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 3vh 0 0 0;
+}
+
+.project-card .project-pic-container {
+    grid-column: 1/7;
+    grid-area: 1 / 1 / -1 / 8; 
+}
+
+.project-card .project-pic {
+    border-radius: 5px;
+    margin: auto;
+    max-width: 100%;
+}
+
+
+.project-card .description  {
+    font-size: var(--text-fs);
+    color: var(--text-color);
+    text-align: right;
+    margin: auto;
+    grid-column: 7/-1;
+    grid-area: 1 / -1 / -1 / 7; 
+}
+
+.project-card h1 {
+    font-size: var(--subheader-fs);
+}
+
+.project-card .description .highlights {
+    background-color: rgba(128, 128, 128, 0.489);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.project-card ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    flex-wrap: wrap;
+    width: inherit;
+}
+
+.project-card li {
+    text-decoration: none;
+    margin-left: 10px;
+}

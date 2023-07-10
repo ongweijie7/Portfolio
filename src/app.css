@@ -1,0 +1,120 @@
+:root {
+    --main-bg-color: rgba(251,251,253,0.8);
+    --cards-color: white;
+    --header-color: black;
+    --text-color: black;
+    --emphasis-color: rgb(172, 129, 92);
+    
+
+    /*Controls the pop-up navbar*/
+    /*navbar-container is the bar at the top while*/
+    --navbar-container: black;
+    --navbar-color: black;
+    --navbar-bg: white;
+    --hover-color: #555;
+
+    
+    --sectionheader-fs: calc(1.5rem + 1vh);
+    --subheader-fs: calc(1rem + 1vh);
+    --text-fs: calc(0.8rem + 1vh);
+    
+
+    /**For titles in the navbar**/
+    --nav-container-fs: calc(2rem + 1.5vh);
+    --nav-container-height: calc(2rem + 5vh);
+    
+
+    --main-font: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    --text-font: "Lucida Console", Courier, monospace;
+    --shadow: 1px 1px 10px -2px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}    
+
+.App {
+    display: flex;
+    flex-direction: row;
+}
+/*Applies to the entire website */
+.emphasis {
+    color: var(--emphasis-color);
+    font-weight: 700;
+    
+}
+
+.section-name {
+    font-family: var(--main-font);
+    color: var(--header-color);
+    text-align: left;
+    display: flex;
+    max-height: var(--sectionheader-fs);
+    font-size: var(--sectionheader-fs);
+    font-weight: bold;
+    align-items: center;
+    
+    
+}
+
+/*------------------------------*/
+
+.nav-container {
+    background-color: var(--navbar-container);
+    display: flex;
+    height: var(--nav-container-height);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-shadow: 1px 1px 20px -1px;
+    position: fixed;
+    z-index: 2;
+    inset: 0 0 0 0;
+}
+
+.nav-container img {
+    color: white;
+    flex: 0 1;
+    height: calc(var(--nav-container-fs) + 2vh);
+}
+
+.nav-icon {
+    color: white;
+    font-size: var(--nav-container-fs);
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+
+
+.section-name::after {
+    content: "";
+    display: block;
+    margin-left: 30px;
+    width: 200px;
+    height: 1px;
+    background-color: #335a9e; /* Set the color of the line */
+}
+
+.page-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.transformed {
+    transform: translateX(-400px);
+}
+
+.content {
+    min-height: 100vh;
+    flex: 1;
+    background-color: var(--main-bg-color);
+    
+}

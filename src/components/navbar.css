@@ -1,0 +1,35 @@
+.navbar {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 400px;
+    background-color: var(--navbar-bg);
+    /* z-index: 1; */
+    /* box-shadow: var(--shadow); */ /*have to change to width expanding from 0 to 300px instead*/
+    transition: 0.5s;
+}
+
+.navbar p {
+    color: var(--navbar-color);
+    margin: 1vh;
+    margin-right: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--nav-container-fs);
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.navbar p:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
