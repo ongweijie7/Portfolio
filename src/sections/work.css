@@ -3,13 +3,12 @@
     height: clamp(1000px, 80vh, 80vh);
     margin: auto;
     max-width: 1000px;
-    padding: 50px 0;
 }
 
 .work img {
     inset: 0;
     position: absolute;
-    z-index: -1;
+    z-index: var(--work-image-bg-order);
     display: block;
     margin: auto;
     width: 80%;
@@ -21,6 +20,7 @@
     display: flex;
     margin-top: 100px;
     min-height: 550px;
+    position: relative;
 }
 
 .work-card .buttons {
@@ -69,7 +69,7 @@
 
 @keyframes fadeInAnimation {
     from {opacity: 0;}
-    to {opacity: 0.3;}
+    to {opacity: 0.5;}
 }
 
 

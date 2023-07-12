@@ -19,10 +19,11 @@ const Work = () => {
 
     return (
         <section className="work">
-            {selected == 1 && <img src={IDEMIA} alt=""/>}
-            {/* {selected == 2 && <img src={IDEMIA} alt=""/>} */}
+            
             <h1 className="section-name">02. Work Experience</h1>
             <div className="work-card">
+                {selected == 1 && <img src={IDEMIA} alt=""/>}
+                {/* {selected == 2 && <img src={IDEMIA} alt=""/>} */}
                 <div className="buttons">
                     <div 
                     className={`button ${selected === 1 ? 'active' : ''}`}

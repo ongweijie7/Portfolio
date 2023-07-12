@@ -3,22 +3,43 @@
     font-family: "Lucida Console", Courier, monospace;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin: 3vh 0 0 0;
+    margin: 100px;
+    /* overflow: hidden; */
+
 }
 
-.project-card .project-pic-container {
+.project-card .project-img {
     grid-column: 1/7;
-    grid-area: 1 / 1 / -1 / 8; 
+    grid-area: 1 / 1 / -1 / 8;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    height: 500px;
+    position: relative;
+    z-index: var(--project-image-order);
 }
 
-.project-card .project-pic {
+.project-card img {
     border-radius: 5px;
-    margin: auto;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card .overlay {
+    position: absolute;
+    z-index: var(--project-image-overlay-order);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--image-overlay-color);
 }
 
 
 .project-card .description  {
+    position: relative;
+    z-index: var(--project-description-order);
     font-size: var(--text-fs);
     color: var(--text-color);
     text-align: right;
@@ -32,20 +53,26 @@
 }
 
 .project-card .description .highlights {
-    background-color: rgba(128, 128, 128, 0.489);
+    background-color: var(--description-background-color);
     padding: 10px;
     border-radius: 5px;
 }
 
-.project-card ul {
+.project-card .techstacks {
+    margin-top: 50px;
     display: flex;
     justify-content: flex-end;
-    list-style-type: none;
-    flex-wrap: wrap;
-    width: inherit;
 }
 
-.project-card li {
+.project-card .techstacks .icon {
+    color: rgb(55, 40, 30, 1);
     text-decoration: none;
-    margin-left: 10px;
+    margin: 0 10px;
+    font-size: calc(1.5rem + 3vh);
+    transition: transform 0.5s ease;
+    text-shadow: var(--shadow);
+}
+
+.project-card .techstacks .icon:hover {
+    transform: translateY(-10px);
 }

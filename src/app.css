@@ -4,6 +4,16 @@
     --header-color: black;
     --text-color: black;
     --emphasis-color: rgb(172, 129, 92);
+
+    /*Stacking Order*/
+    --nav-container-order: 5;
+    /*Work section*/
+    --work-image-bg-order: 0;
+    /*Project section*/
+    --project-image-overlay-order: 1;
+    --project-image-order: 0;
+    --project-description-order: 2;
+
     
 
     /*Controls the pop-up navbar*/
@@ -12,6 +22,10 @@
     --navbar-color: black;
     --navbar-bg: white;
     --hover-color: #555;
+
+    /*Project section*/
+    --image-overlay-color: rgba(211, 211, 211, 0.4);
+    --description-background-color: rgba(141, 109, 68, 0.9); /*Cappucinno Brown*/
 
     
     --sectionheader-fs: calc(1.5rem + 1vh);
@@ -39,14 +53,21 @@ body {
 }    
 
 .App {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
+
 }
 /*Applies to the entire website */
 .emphasis {
     color: var(--emphasis-color);
     font-weight: 700;
     
+}
+.page-container {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    transition: 0.5s ease;
 }
 
 .section-name {
@@ -58,8 +79,6 @@ body {
     font-size: var(--sectionheader-fs);
     font-weight: bold;
     align-items: center;
-    
-    
 }
 
 /*------------------------------*/
@@ -72,9 +91,10 @@ body {
     justify-content: space-between;
     padding: 10px 40px;
     box-shadow: 1px 1px 20px -1px;
-    position: fixed;
-    z-index: 2;
-    inset: 0 0 0 0;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: var(--nav-container-order);
 }
 
 .nav-container img {
@@ -90,8 +110,6 @@ body {
     margin-right: 30px;
 }
 
-
-
 .section-name::after {
     content: "";
     display: block;
@@ -101,15 +119,9 @@ body {
     background-color: #335a9e; /* Set the color of the line */
 }
 
-.page-container {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    transition: 0.5s ease;
-}
-
 .transformed {
     transform: translateX(-400px);
+    /* width: calc(100% - 400px); */
 }
 
 .content {

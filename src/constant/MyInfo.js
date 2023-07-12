@@ -1,16 +1,24 @@
+import ProHub from "../assets/ProHub.png";
+import JbBlog from "../assets/JbBlog.png";
+
+import { FaReact, FaCss3Alt } from "react-icons/fa";
+import { RiJavascriptFill } from "react-icons/ri";
+import { SiMongodb, SiFirebase} from "react-icons/si";
 
 
 
 export const projects = [
     {
         title: "Pro Hub",
+        img: ProHub,
         highlights: "This was a application design to boost the productivity of students and to keep students focused",
-        techstacks: []
+        techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt]
     },
     {
         title: "JB Delights",
-        highlights: "This Application was designed with the intention of collating various JB itinaries for potential travellers as I felt that information was not easily found",
-        techstacks: []
+        img: JbBlog,
+        highlights: "A full-stack application built using MERN which was aimed at collating various JB itineraries for potential travellers",
+        techstacks: [FaReact, SiMongodb, RiJavascriptFill, FaCss3Alt]
     },
 ]
 
@@ -44,3 +52,17 @@ export const work = [
     },
 
 ]
+
+export const Proj1 = () => {
+    return (<><FaReact className="icon"/>
+            <SiFirebase className="icon"/>
+            <FaCss3Alt className="icon"/>
+            <RiJavascriptFill className="icon"/></>)
+}
+
+export const Proj2 = () => {
+    return (<><FaReact className="icon"/>
+            <SiMongodb className="icon"/>
+            <FaCss3Alt className="icon"/>
+            <RiJavascriptFill className="icon"/></>)
+}
