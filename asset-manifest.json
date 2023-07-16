@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8880a6d1.css",
+    "main.js": "/static/js/main.a3495e83.js",
+    "static/media/JbBlog.png": "/static/media/JbBlog.316c026265a9ee7b4166.png",
+    "static/media/ProHub.png": "/static/media/ProHub.9de64a22945a1ff71f28.png",
+    "static/media/wj-icon.png": "/static/media/wj-icon.d7ad56981616f5a91657.png",
+    "static/media/me.jpeg": "/static/media/me.fdc9bb2f5a900b63414b.jpeg",
+    "static/media/IDEMIA.png": "/static/media/IDEMIA.707081fccada05c980ff.png",
+    "index.html": "/index.html",
+    "main.8880a6d1.css.map": "/static/css/main.8880a6d1.css.map",
+    "main.a3495e83.js.map": "/static/js/main.a3495e83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8880a6d1.css",
+    "static/js/main.a3495e83.js"
+  ]
+}
