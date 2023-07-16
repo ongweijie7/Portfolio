@@ -10,16 +10,54 @@
     height: 100vh;
     width: 400px;
     background-color: var(--navbar-bg);
-    /* box-shadow: var(--shadow); */ /*have to change to width expanding from 0 to 300px instead*/
-    transition: 0.5s;
+    transform: translateX(400px);
+    transition: 0.5s ease;
 }
+
+
+
+.transformedNavbar {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 400px;
+    background-color: var(--navbar-bg);
+    transition: 0.5s ease;
+}
+
+.transformedNavbar p {
+    color: var(--navbar-color);
+    margin: 1vh;
+    margin-right: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--navbar-titles-fs);
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.transformedNavbar p:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+
 
 .navbar p {
     color: var(--navbar-color);
     margin: 1vh;
     margin-right: 20px;
     font-family: "Poppins", sans-serif;
-    font-size: var(--nav-container-fs);
+    font-size: var(--navbar-titles-fs);
     font-weight: 600;
     text-transform: uppercase;
     display: flex;

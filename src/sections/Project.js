@@ -11,10 +11,7 @@ const Project = () => {
             <h1 className="section-name">03. My Projects</h1>
             {projects.map((project, index) => (
                 <Card project={project} index={index}/>
-            ))
-
-            }
-            
+            ))}
         </section>
     )
 }

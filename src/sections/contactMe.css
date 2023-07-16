@@ -1,0 +1,39 @@
+.contactMe {
+    padding-top: 0;
+}
+
+.contactMe > .content {
+    font-family: var(--text-font);
+    font-size: var(--text-fs);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 500px;
+}
+
+.contactMe > .content > * {
+    width: 40ch;
+}
+
+.content > span{
+    font-size: var( --sectionheader-fs);
+    color: var(--emphasis-color);
+    font-weight: 900;
+}
+
+.contactMe .button {
+    border: black solid 2px;
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease 0.5s;
+
+}
+
+.contactMe .button:hover {
+    background-color: rgba(155, 118, 83, 1);
+    transform: translateY(-8px);
+}

@@ -11,7 +11,7 @@ export const projects = [
     {
         title: "Pro Hub",
         img: ProHub,
-        highlights: "This was a application design to boost the productivity of students and to keep students focused",
+        highlights: "This was a full-stack application built over year 1 summer with the aim of boosting the productivity of students and help fellow students fight procrastination",
         techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt]
     },
     {
@@ -31,38 +31,23 @@ export const work = [
         "Employed Java Spring Boot to work with both SOAP and REST API, creating integration test cases with REST Assured",
         "Conducted comprehensive integration tests using SOAPUI and Postman, ensuring seamless system operations",
         "Regularly participated in biweekly sprint meetings, contributing to team strategy and project coordination"]
-    },
-    {
-        position: "Full Stack Developer",
-        company: "Facebook",
-        duration: "May 2023 - Present",
-        achievements: ["Played a pivotal role in implementing an electronic server designed to process requests from frontend devices, enhancing system responsiveness",
-        "Employed Java Spring Boot to work with both SOAP and REST API, creating integration test cases with REST Assured",
-        "Conducted comprehensive integration tests using SOAPUI and Postman, ensuring seamless system operations",
-        "Regularly participated in biweekly sprint meetings, contributing to team strategy and project coordination"]
-    },
-    {
-        position: "Full Stack Developer",
-        company: "Google",
-        duration: "May 2023 - Present",
-        achievements: ["Played a pivotal role in implementing an electronic server designed to process requests from frontend devices, enhancing system responsiveness",
-        "Employed Java Spring Boot to work with both SOAP and REST API, creating integration test cases with REST Assured",
-        "Conducted comprehensive integration tests using SOAPUI and Postman, ensuring seamless system operations",
-        "Regularly participated in biweekly sprint meetings, contributing to team strategy and project coordination"]
-    },
-
+    }
 ]
 
 export const Proj1 = () => {
-    return (<><FaReact className="icon"/>
-            <SiFirebase className="icon"/>
-            <FaCss3Alt className="icon"/>
-            <RiJavascriptFill className="icon"/></>)
+    return (<>
+            <div className="icon-container"><FaReact className="icon"/> <p>React Native</p></div>
+            <div className="icon-container"><SiFirebase className="icon"/> <p>Firebase</p></div>
+            <div className="icon-container"><FaCss3Alt className="icon"/> <p>CSS</p></div>
+            <div className="icon-container"><RiJavascriptFill className="icon"/><p>Javascript</p></div>
+            </>)
 }
 
 export const Proj2 = () => {
-    return (<><FaReact className="icon"/>
-            <SiMongodb className="icon"/>
-            <FaCss3Alt className="icon"/>
-            <RiJavascriptFill className="icon"/></>)
+    return (<>
+            <div className="icon-container"><FaReact className="icon"/> <p>React</p></div>
+            <div className="icon-container"><SiMongodb className="icon"/> <p>MongoDB</p></div>
+            <div className="icon-container"><FaCss3Alt className="icon"/> <p>CSS</p></div>
+            <div className="icon-container"><RiJavascriptFill className="icon"/> <p>Javascript</p></div>
+            </>)
 }

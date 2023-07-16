@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 import WJ from "./assets/wj-icon.png";
@@ -6,18 +7,24 @@ import Navbar from "./components/Navbar";
 import AboutMe from "./sections/AboutMe";
 import Project from "./sections/Project";
 import Work from "./sections/Work";
+import ContactMe from "./sections/ContactMe"
 
 import "./app.css";
 
 function App() {
+  const navigate = useNavigate();
   /* for controlling the onScroll function */
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   const projectRef = useRef(null);
+  const contactMeRef = useRef(null);
 
   const [about, setAbout] = useState(false);
   const [work, setWork] = useState(false);
   const [project, setProject] = useState(false);
+  const [contactMe, setContactMe] = useState(false);
+
+
 
   const scrollToAbout = () => {
     console.log(aboutRef);
@@ -38,6 +45,12 @@ function App() {
       behavior: "smooth",
     })
   }
+  const scrollToContactMe = () => {
+    window.scrollTo({
+      top: contactMeRef.current.offsetTop,
+      behavior: "smooth",
+    })
+  }
 
   /*For toggling the navbar */
   const [navbar, setNavbar] = useState(false);
@@ -55,14 +68,17 @@ function App() {
     } else if (project) {
       scrollToProject();
       setProject(false);
+    } else if (contactMe) {
+      scrollToContactMe();
+      setContactMe(false);
     }
-  }, [about, work, project]);
+  }, [about, work, project, contactMe]);
 
   return (
     <div className="App">
       <div className={`page-container ${navbar ? 'transformed' : ''}`}>
         <div className="nav-container" >
-          <img src={WJ}/>
+          <Link to="/" className="reload"><img src={WJ}/></Link>
           <div onClick={showNav}>
               <FaBars className="nav-icon"/>
           </div>
@@ -78,14 +94,19 @@ function App() {
           <div ref={projectRef}>
             <Project/>
           </div>
+          <div ref={contactMeRef}>
+            <ContactMe/>
+          </div>
         </div>
         
       </div>
-      {navbar &&
-        <Navbar 
+   
+      <Navbar
+        showNavbar={navbar}
         onClickAbout={() => setAbout(true)}
         onClickProject={() => setProject(true)}
-        onClickWork={() => setWork(true)}/>}
+        onClickWork={() => setWork(true)}
+        onClickContactMe={() => setContactMe(true)}/>
     </div>
   );
 }

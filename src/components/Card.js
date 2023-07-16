@@ -1,11 +1,7 @@
 import placeholder from "../assets/placeholder.png";
+import { Proj1, Proj2 } from "../constant/MyInfo";
 
 import "./card.css";
-
-import { FaReact, FaCss3Alt } from "react-icons/fa";
-import { RiJavascriptFill } from "react-icons/ri";
-import { SiMongodb, SiFirebase} from "react-icons/si";
-import { Proj1, Proj2 } from "../constant/MyInfo";
 
 const Card = ({ project, index }) => {
     let Icons = null;
@@ -15,26 +11,39 @@ const Card = ({ project, index }) => {
         Icons = Proj2;
     }
 
-    return (
-        <div className="project-card">
-            <div className="project-img">
+    const Image = () => {
+        return (
+             <div className="project-img">
                 <img src={project.img}/>
-                <div className="overlay">
+                <div className="overlay"></div>
+            </div>)
+    }
+    
+    const Description = ({index}) => {
+        return (<div className="description">
+                    <h1>{project.title}</h1>
+                    <p className="highlights"> {project.highlights}</p>
+                    <div className={`techstacks ${index%2!=0? "isOdd":""}`}>
+                        <Icons/>
+                    </div>
+                </div>)
+    }
 
-                </div>
-            </div>
+
+    return (
+        
+        <div className="project-card">
+            { index % 2 == 0 ?
+            <>
+                <Image/>
+                <Description index={index}/>
+            </> :
+            <>
+                <Description index={index}/>
+                <Image/>
+            </>
+            }
             
-                        
-            <div className="description">
-                <h1>{project.title}</h1>
-                <p className="highlights"> {project.highlights}</p>
-                <div className="techstacks">
-                    <Icons/>
-                </div>
-                <div >
-
-                </div>
-            </div>
         </div>
 
     )

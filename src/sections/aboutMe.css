@@ -3,11 +3,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    min-height: 100vh;
+    min-height: calc(100vh - var(--nav-container-height));
     font-family: var(--text-font);
     
 }
+
+.name {
+    font-size: var(--sectionheader-fs);
+    font-weight: 700;
+}
+
+.name > span {
+    color: var(--emphasis-color);
+}
+
 
 .about-me .contact-me {
     display: flex;
@@ -21,7 +30,6 @@
 .about-me .contact-me li {
     cursor: pointer;
     margin: 15px 0;
-    
 }
 
 .about-me .contact-me .icons {
@@ -48,14 +56,25 @@
 .profile-pic {
     border-radius: 10px;
     box-shadow: var(--shadow);
+    animation: 0.5 ease;
+    max-height: 540px;
+}
+
+.profile-pic:hover {
+    transform: scale(1.03) rotate(-3deg);
+
 }
 
 .about-me .description {
     text-align: left;
-    width: 60ch;
-    padding: 20px 20px 20px 0;
-    display: flex;
-    align-items: center;
-    font-size: var(--text-fs);
+    min-width: 45ch;
+    max-width: 60ch;
+    padding: 0px 20px 20px 0;
+    font-size: calc(var(--text-fs) - 0.2rem);
     margin: 20px 20px 20px 0;
+}
+
+.description span {
+    color: var(--emphasis-color);
+    font-weight: 500;
 }

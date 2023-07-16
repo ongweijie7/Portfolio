@@ -1,10 +1,3 @@
-
-.work {
-    height: clamp(1000px, 80vh, 80vh);
-    margin: auto;
-    max-width: 1000px;
-}
-
 .work img {
     inset: 0;
     position: absolute;
@@ -13,7 +6,7 @@
     margin: auto;
     width: 80%;
     opacity: 0;
-    animation: fadeInAnimation 0.5s ease-in forwards;
+    animation: fadeInAnimation 1s ease-in forwards;
 }
 
 .work-card {
@@ -25,13 +18,13 @@
 
 .work-card .buttons {
     display: flex;
-    height: 1;
     flex-direction: column;
     text-decoration: none;
     align-items: stretch;
 }
 
 .work-card .buttons .button {
+    cursor: pointer;
     min-height: 100px;
     flex: 1;
     color: black;
@@ -53,12 +46,16 @@
     flex: 5;
     margin-left: 80px;
     font-family: var(--text-font);
-    
 }
 
 .work-card .job-intro * {
-    animation: fadeIn 0.2s ease-in forwards;
+    animation: fadeIn 0.1s ease-in forwards;
     opacity: 0;
+}
+
+.work-card .job-intro span {
+    cursor: pointer;
+
 }
 
 @keyframes fadeIn {
@@ -69,7 +66,7 @@
 
 @keyframes fadeInAnimation {
     from {opacity: 0;}
-    to {opacity: 0.5;}
+    to {opacity: 0.3;}
 }
 
 
@@ -103,7 +100,7 @@
 
 .work .job-intro li:before {
     content: "▹";
-    color: burlywood;
+    color: var(--emphasis-color);
     position: absolute;
     left: 0px;
 }

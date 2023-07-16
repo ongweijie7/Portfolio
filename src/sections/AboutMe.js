@@ -9,6 +9,23 @@ const AboutMe = () => {
     const githubLink = "https://github.com/ongweijie7";
     const instagramLink = "https://www.instagram.com/wei._.jiee/";
     
+
+    let introduction= "I am an aspiring developer, currently in my *penultimate year of Computer Science* at NUS."
+    + "My primary interest lies in the field of *artificial intelligence* for I "
+    + "am intrigued by how it can be harnessed to enhance our daily lives."
+    + " I relish the opportunity to meet like-minded individuals and engage in discussions about possible solutions to problems we commonly face." 
+    + " Beyond academics, I try to lead a balanced lifestyle with regular gym workouts and occasional runs.\n\n"
+    + "Currently, I am interning as a *full stack developer at IDEMIA* while also working on my side projects."
+    + " Here are some of the technologies I have worked with *React*, *Firebase*, *ExpressJs*, *MongoDb*, *Java Spring boot*."
+    const highlightWords = (text) => {
+        const regex = /\*(.*?)\*/g;
+        const highlightedText = text.replace(regex, '<span className="highlight">$1</span>').replace(/\n/g, '<br/>');
+        
+        return <p className="description" dangerouslySetInnerHTML={{ __html: highlightedText }} />;
+    };
+
+    introduction = highlightWords(introduction);
+    console.log(introduction)
     const redirectTo = (link) => {
         window.open(link, "_blank");
     
@@ -26,13 +43,9 @@ const AboutMe = () => {
 
             <div className="card">
                 <h1 className="section-name">01. About Me</h1>
+                <span className="name">Hi I am <span>Wei Jie</span>,</span>
                 <div className="introduction">
-                    <p className="description">I am an aspiring developer, currently in my penultimate year of Computer Science studies at the National University of Singapore. 
-                    My primary interest lies in the field of Artificial Intelligence for I
-                    am particularly fascinated by how it can be harnessed to enhance our daily lives. 
-                    I relish the opportunity to meet like-minded individuals and engage in discussions about the revolutionary ways in which technology can improve our lives. 
-                    Beyond academics, I try to lead a balanced lifestyle with regular gym workouts and occasional running sessions for fitness. 
-                    </p>
+                     {introduction}
                     <img className="profile-pic" src={profilePic}/>            
                 </div>
             </div>
