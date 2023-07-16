@@ -94,7 +94,7 @@ section {
     padding: 10px 40px;
     box-shadow: 1px 1px 10px 1px;
     position: sticky;
-    /* width: 100%; */
+    width: 100%;
     top: 0;
     right: 0;
     z-index: var(--nav-container-order);
@@ -136,5 +136,10 @@ section {
     background-color: var(--main-bg-color);
     padding: 0px 80px;
     margin: 0 auto;
-    
+}
+
+@media only screen and (max-width: 450px) {
+    .nav-container {
+        display: none;
+    }
 }

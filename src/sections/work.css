@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 10px;
     font-family: var(--text-font);
 }
 
@@ -72,7 +72,6 @@
 
 .work-card .buttons .active {
     border-left: 3px solid black; 
-    
 }
 
 
@@ -103,4 +102,24 @@
     color: var(--emphasis-color);
     position: absolute;
     left: 0px;
+}
+
+@media only screen and (max-width: 450px) {
+    .work-card {
+        display: block;
+    }
+
+    .work-card .buttons {
+        flex-direction: row;
+    }
+
+    .work-card .buttons .button {
+        border: 0;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+    }
+
+    .work-card .buttons .active {
+        border-bottom: 3px solid black; 
+    }
 }

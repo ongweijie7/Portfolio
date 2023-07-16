@@ -5,6 +5,7 @@
     align-items: center;
     min-height: calc(100vh - var(--nav-container-height));
     font-family: var(--text-font);
+    padding: 10px;
     
 }
 
@@ -22,8 +23,7 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    padding-right: 100px;
-    padding-top: calc(var(--subheader-fs) + 1rem);
+    padding-right: 50px;
 }
 
 
@@ -53,28 +53,45 @@
     color: var(--text-color);
 }
 
-.profile-pic {
+.about-me .profile-pic {
     border-radius: 10px;
     box-shadow: var(--shadow);
     animation: 0.5 ease;
     max-height: 540px;
 }
 
-.profile-pic:hover {
+.about-me .profile-pic:hover {
     transform: scale(1.03) rotate(-3deg);
-
 }
 
 .about-me .description {
     text-align: left;
-    min-width: 45ch;
     max-width: 60ch;
-    padding: 0px 20px 20px 0;
     font-size: calc(var(--text-fs) - 0.2rem);
-    margin: 20px 20px 20px 0;
+    /* margin: 20px 20px 20px 0; */
 }
 
 .description span {
     color: var(--emphasis-color);
     font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-me .profile-pic {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .about-me .contact-me {
+        display: none;
+    }
+
+    .project-card img {
+        grid-column: 1 / -1;
+    }
+
+    .project-card .description {
+        grid-column: 1 / -1;
+    }
 }

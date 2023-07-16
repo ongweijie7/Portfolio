@@ -14,7 +14,7 @@
 }
 
 .contactMe > .content > * {
-    width: 40ch;
+    max-width: 40ch;
 }
 
 .content > span{
@@ -25,7 +25,7 @@
 
 .contactMe .button {
     border: black solid 2px;
-    width: max-content;
+    max-width: max-content;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
