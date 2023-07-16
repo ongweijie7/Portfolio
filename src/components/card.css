@@ -12,13 +12,13 @@
 }
 
 .project-card .project-img:nth-child(even) {
-    grid-column: 1/7;
-    grid-area: 1 / 1 / -1 / 8;
+    grid-column: 1/9;
+    grid-area: 1 / 1 / -1 / 9;
 }
 
 .project-card .project-img:nth-child(odd) {
-    grid-column: 7/-1;
-    grid-area: 1 / -1 / -1 / 7;
+    grid-column: 6/-1;
+    grid-area: 1 / -1 / -1 / 6;
 }
 
 .project-card .project-img {

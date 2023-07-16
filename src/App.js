@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 
 import WJ from "./assets/wj-icon.png";
 import Navbar from "./components/Navbar";
@@ -80,7 +81,7 @@ function App() {
         <div className="nav-container" >
           <Link to="/" className="reload"><img src={WJ}/></Link>
           <div onClick={showNav}>
-              <FaBars className="nav-icon"/>
+              {!navbar ? <FaBars className="nav-icon"/> : <ImCross className="nav-icon"/>}
           </div>
         </div>
         

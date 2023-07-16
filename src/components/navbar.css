@@ -15,7 +15,6 @@
 }
 
 
-
 .transformedNavbar {
     box-sizing: content-box;
     display: flex;
@@ -33,15 +32,15 @@
 
 .transformedNavbar p {
     color: var(--navbar-color);
-    margin: 1vh;
+    margin: 1.5vh;
     margin-right: 20px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--main-font);
     font-size: var(--navbar-titles-fs);
     font-weight: 600;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
+    width: 100%;
     text-align: center;
+    /* display: block; */
     overflow-wrap: break-word;
 }
 
@@ -54,15 +53,15 @@
 
 .navbar p {
     color: var(--navbar-color);
-    margin: 1vh;
+    margin: 1.5vh;
     margin-right: 20px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--main-font);
     font-size: var(--navbar-titles-fs);
     font-weight: 600;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
+    width: 100%;
     text-align: center;
+    /* display: block; */
     overflow-wrap: break-word;
 }
 
