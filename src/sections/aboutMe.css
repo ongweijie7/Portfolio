@@ -102,7 +102,7 @@
     .about-me .information {
         flex-direction: row;
         justify-content: center;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     .about-me .information > * {
         margin: 5vw;
@@ -133,6 +133,7 @@
     }
 
     .about-me .information .contact-me .icons {
+        margin-top: 50px;
         font-size: 80px;
     }
 }

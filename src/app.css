@@ -64,6 +64,12 @@ section {
     padding: 100px 30px;
 }
 
+@media only screen and (max-width: 500px) {
+    section {
+        padding-bottom: 0;
+    }
+}
+
 .emphasis {
     color: var(--emphasis-color);
     font-weight: 700;
