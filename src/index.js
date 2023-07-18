@@ -4,7 +4,6 @@ import { HashRouter,BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from './App';
 import Transition from './sections/Transition';
-import { render } from '@testing-library/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

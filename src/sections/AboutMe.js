@@ -34,11 +34,7 @@ const AboutMe = () => {
     return (
         <section className="about-me">
             
-            <ul className="contact-me">
-                <li onClick={() => redirectTo(githubLink)}><FaGithub className="icons"/></li>
-                <li onClick={() => redirectTo(linkedinlink)}><FaLinkedin className="icons"/></li>
-                <li onClick={() => redirectTo(instagramLink)}><FaInstagramSquare className="icons"/></li>
-            </ul>
+            
 
 
             <div className="card">
@@ -46,7 +42,14 @@ const AboutMe = () => {
                 <span className="name">Hi I am <span>Wei Jie</span>,</span>
                 <div className="introduction">
                      {introduction}
-                    <img className="profile-pic" src={profilePic}/>            
+                     <div className="information">
+                        <img className="profile-pic" src={profilePic}/>    
+                        <ul className="contact-me">
+                            <li onClick={() => redirectTo(githubLink)}><FaGithub className="icons"/></li>
+                            <li onClick={() => redirectTo(linkedinlink)}><FaLinkedin className="icons"/></li>
+                            <li onClick={() => redirectTo(instagramLink)}><FaInstagramSquare className="icons"/></li>
+                        </ul>
+                     </div>
                 </div>
             </div>
             

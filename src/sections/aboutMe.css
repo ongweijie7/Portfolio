@@ -4,9 +4,7 @@
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - var(--nav-container-height));
-    font-family: var(--text-font);
-
-    
+    font-family: var(--text-font);    
 }
 
 .name {
@@ -21,23 +19,22 @@
 
 .about-me .contact-me {
     display: flex;
-    flex-direction: column;
     list-style-type: none;
-    padding-right: 50px;
+    padding: 0;
 }
 
 
 .about-me .contact-me li {
     cursor: pointer;
-    margin: 15px 0;
+    margin: 15px;
 }
 
 .about-me .contact-me .icons {
-    font-size: 100px;
+    font-size: 90px;
     box-shadow: var(--shadow);
-    padding: 5px;
+    padding: 4px;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: transform 0.5s ease;
 }
 
@@ -51,14 +48,22 @@
 .about-me .introduction {
     box-sizing: border-box;
     display: flex;
+    align-items: center;
     color: var(--text-color);
 }
 
-.about-me .profile-pic {
+.about-me .information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me .information .profile-pic {
     border-radius: 10px;
     box-shadow: var(--shadow);
     animation: 0.5 ease;
-    max-height: 540px;
+    max-height: 600px;
+    width: auto;
 }
 
 .about-me .profile-pic:hover {
@@ -78,19 +83,52 @@
     font-weight: 500;
 }
 
-@media only screen and (max-width: 1200px) {
-    .about-me .profile-pic {
-        display: none;
+@media only screen and (max-width: 1000px) {
+    .about-me .introduction {
+        display: block;
+    }
+
+    .about-me .introduction .description {
+        font-size: var(--text-fs-1000);
+    }
+
+    .about-me .contact-me {
+        flex-direction: column;
+    }
+
+    .about-me .information {
+        margin-top: 100px;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .about-me .information > * {
+        margin: 5vw;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .about-me .contact-me {
-        display: none;
-    }
-
     .about-me .description {
         grid-column: 1 / -1;
         min-width: 0;
     }
 }
+
+@media only screen and (max-width: 550px) {
+    .about-me .information {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me .information .contact-me {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        /* margin: 0; */
+    }
+
+    .about-me .information .contact-me .icons {
+        font-size: 70px;
+    }
+}
+    
+    

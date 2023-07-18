@@ -13,8 +13,6 @@ import ContactMe from "./sections/ContactMe"
 import "./app.css";
 
 function App() {
-  const navigate = useNavigate();
-  /* for controlling the onScroll function */
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   const projectRef = useRef(null);
@@ -24,8 +22,6 @@ function App() {
   const [work, setWork] = useState(false);
   const [project, setProject] = useState(false);
   const [contactMe, setContactMe] = useState(false);
-
-
 
   const scrollToAbout = () => {
     console.log(aboutRef);

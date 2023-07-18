@@ -130,9 +130,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .about-me .contact-me {
-        display: none;
-    }
 
     .project-card .project-img:nth-child(odd)  {
         grid-column: 1 / -1;

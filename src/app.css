@@ -29,15 +29,18 @@
     --description-background-color: rgba(141, 109, 68, 0.98); /*Cappucinno Brown*/
     --description-icons-color: rgb(55, 40, 30, 1);
     
+    /*Font-sizes*/
     --sectionheader-fs: calc(1.5rem + 1vh);
     --subheader-fs: calc(1rem + 1vh);
-    --text-fs: calc(0.8rem + 1vh + 0.3vw);
+    --text-fs: calc(0.8rem + 1.3vh);
     
-
     /**For titles in the navbar**/
     --nav-container-height: calc(3.5rem + 5vh);
     --nav-container-fs: calc(2rem + 2.5vh);
     --navbar-titles-fs: calc(2rem + 1.5vh);
+
+    /**For resizing**/
+    --text-fs-1000 : calc(0.8rem + 1.3vw);
     
 
     --main-font: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;

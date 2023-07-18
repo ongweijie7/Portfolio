@@ -13,6 +13,7 @@
     display: flex;
     margin-top: 100px;
     min-height: 550px;
+    max-height: 700px;
     position: relative;
 }
 
@@ -21,32 +22,37 @@
     flex-direction: column;
     text-decoration: none;
     align-items: stretch;
+    min-height: calc(700px);
 }
 
 .work-card .buttons .button {
     cursor: pointer;
-    min-height: 100px;
-    flex: 1;
+    flex: 1 1;
     color: black;
     font-size: var(--text-fs);
+    font-weight: 600;
     border-left: 3px solid rgba(0, 0, 0, 0.3);
-    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     font-family: var(--text-font);
 }
 
 .work-card .job-intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     font-size: var(--text-fs);
     flex: 5;
-    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--text-font);
+    min-width: 30ch;
 }
+
+.work-card .job-intro  > p {
+    text-align: center;
+}
+
 
 .work-card .job-intro * {
     animation: fadeIn 0.1s ease-in forwards;
@@ -55,7 +61,6 @@
 
 .work-card .job-intro span {
     cursor: pointer;
-
 }
 
 @keyframes fadeIn {
@@ -82,8 +87,6 @@
     
 }
 
-
-
 .work .job-intro ul {
     margin: 0;
     padding: 0;
@@ -104,13 +107,14 @@
     left: 0px;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1000px) {
     .work-card {
         display: block;
     }
-
     .work-card .buttons {
         flex-direction: row;
+        min-height: auto;
+        margin-bottom: 50px;
     }
 
     .work-card .buttons .button {
@@ -118,6 +122,18 @@
         border-bottom: 3px solid rgba(0, 0, 0, 0.3);
         border-radius: 0;
     }
+
+    .work-card .job-intro {
+        min-height: 600px;
+        min-width: 0;
+        font-size: var(--text-fs-1000);
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    
+    
 
     .work-card .buttons .active {
         border-bottom: 3px solid black; 
