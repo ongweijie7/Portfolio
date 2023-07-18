@@ -8,7 +8,8 @@ import Navbar from "./components/Navbar";
 import AboutMe from "./sections/AboutMe";
 import Project from "./sections/Project";
 import Work from "./sections/Work";
-import ContactMe from "./sections/ContactMe"
+import ContactMe from "./sections/ContactMe";
+import LoadingAnimation from "./sections/LoadingAnimation";
 
 import "./app.css";
 
@@ -51,13 +52,19 @@ function App() {
 
   /*For toggling the navbar */
   const [navbar, setNavbar] = useState(false);
-    const showNav = () => {
-        setNavbar(!navbar);
-    }
+  const [loading, setLoading] = useState(true);
+
+  const showNav = () => {
+      setNavbar(!navbar);
+  }
   
-  // useEffect (() => {
-    
-  // })
+  useEffect (() => {
+    const timeout = setTimeout(() => {
+        setLoading(false) // Replace '/' with the URL of your main page
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  })
 
   useEffect(() => {
     if (about) {
@@ -76,39 +83,44 @@ function App() {
   }, [about, work, project, contactMe]);
 
   return (
-    <div className="App">
-      <div className={`page-container ${navbar ? 'transformed' : ''}`}>
-        <div className="nav-container" >
-          <Link to="/" className="reload"><img src={WJ}/></Link>
-          <div onClick={showNav}>
-              {!navbar ? <FaBars className="nav-icon"/> : <ImCross className="nav-icon"/>}
+    <>
+    {loading 
+    ? <LoadingAnimation/>
+    : <div className="App">
+        <div className={`page-container ${navbar ? 'transformed' : ''}`}>
+          <div className="nav-container" >
+            <Link to="/" className="reload"><img src={WJ}/></Link>
+            <div onClick={showNav}>
+                {!navbar ? <FaBars className="nav-icon"/> : <ImCross className="nav-icon"/>}
+            </div>
           </div>
+          
+          <div className="content">
+            <div ref={aboutRef}>
+              <AboutMe/>
+            </div>
+            <div ref={workRef}>
+              <Work/>
+            </div>
+            <div ref={projectRef}>
+              <Project/>
+            </div>
+            <div ref={contactMeRef}>
+              <ContactMe/>
+            </div>
+          </div>
+          
         </div>
-        
-        <div className="content">
-          <div ref={aboutRef}>
-            <AboutMe/>
-          </div>
-          <div ref={workRef}>
-            <Work/>
-          </div>
-          <div ref={projectRef}>
-            <Project/>
-          </div>
-          <div ref={contactMeRef}>
-            <ContactMe/>
-          </div>
-        </div>
-        
+    
+        <Navbar
+          showNavbar={navbar}
+          onClickAbout={() => setAbout(true)}
+          onClickProject={() => setProject(true)}
+          onClickWork={() => setWork(true)}
+          onClickContactMe={() => setContactMe(true)}/>
       </div>
-   
-      <Navbar
-        showNavbar={navbar}
-        onClickAbout={() => setAbout(true)}
-        onClickProject={() => setProject(true)}
-        onClickWork={() => setWork(true)}
-        onClickContactMe={() => setContactMe(true)}/>
-    </div>
+    }
+    </>
   );
 }
 

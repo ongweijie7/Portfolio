@@ -32,7 +32,7 @@
     /*Font-sizes*/
     --sectionheader-fs: calc(1.5rem + 1vh);
     --subheader-fs: calc(1rem + 1vh);
-    --text-fs: calc(0.8rem + 1.3vh);
+    --text-fs: calc(0.9rem + 1.3vh);
     
     /**For titles in the navbar**/
     --nav-container-height: calc(3.5rem + 5vh);
