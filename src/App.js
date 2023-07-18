@@ -54,6 +54,10 @@ function App() {
     const showNav = () => {
         setNavbar(!navbar);
     }
+  
+  // useEffect (() => {
+    
+  // })
 
   useEffect(() => {
     if (about) {
