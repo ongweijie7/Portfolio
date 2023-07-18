@@ -126,8 +126,12 @@
         /* margin: 0; */
     }
 
+    .about-me .information > * {
+        margin: 0;
+    }
+
     .about-me .information .contact-me .icons {
-        font-size: 70px;
+        font-size: 80px;
     }
 }
     
