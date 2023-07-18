@@ -1,51 +1,51 @@
 .work img {
-    inset: 0;
-    position: absolute;
-    z-index: var(--work-image-bg-order);
-    display: block;
-    margin: auto;
-    width: 80%;
-    opacity: 0;
     animation: fadeInAnimation 1s ease-in forwards;
+    display: block;
+    inset: 0;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    width: 80%;
+    z-index: var(--work-image-bg-order);
 }
 
 .work-card {
     display: flex;
     margin-top: 100px;
-    min-height: 550px;
     max-height: 700px;
+    min-height: 550px;
     position: relative;
 }
 
 .work-card .buttons {
+    align-items: stretch;
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-    align-items: stretch;
     min-height: calc(700px);
+    text-decoration: none;
 }
 
 .work-card .buttons .button {
-    cursor: pointer;
-    flex: 1 1;
+    align-items: center;
+    border-left: 3px solid rgba(0, 0, 0, 0.3);
     color: black;
+    cursor: pointer;
+    display: flex;
+    flex: 1 1;
+    font-family: var(--text-font);
     font-size: var(--text-fs);
     font-weight: 600;
-    border-left: 3px solid rgba(0, 0, 0, 0.3);
-    display: flex;
     justify-content: center;
-    align-items: center;
     padding: 20px;
-    font-family: var(--text-font);
 }
 
 .work-card .job-intro {
-    font-size: var(--text-fs);
-    flex: 5;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
+    flex: 5;
     font-family: var(--text-font);
+    font-size: var(--text-fs);
+    justify-content: center;
     min-width: 30ch;
 }
 
@@ -94,17 +94,17 @@
 
 .work .job-intro li {
     display: list-item;
-    position: relative;
     list-style: none;
     margin: 20px 0;
     padding-left: 30px;
+    position: relative;
 }
 
 .work .job-intro li:before {
-    content: "▹";
     color: var(--emphasis-color);
-    position: absolute;
+    content: "▹";
     left: 0px;
+    position: absolute;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -132,9 +132,6 @@
 
 
 @media only screen and (max-width: 450px) {
-    
-    
-
     .work-card .buttons .active {
         border-bottom: 3px solid black; 
     }

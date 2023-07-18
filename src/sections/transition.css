@@ -1,18 +1,17 @@
 .cup {
-    position: absolute;
-    height: 170px;
-    width: 200px;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-85px) translateX(-100px);
-    border: 8px solid black;
-    border-radius: 0 0 70px 70px;
-    background-image: url(../assets/coffee.png);
-    box-shadow:  1px 1px 10px -2px;
     animation: fill 3s linear infinite;
-    background-repeat: repeat-x;
+    background-image: url(../assets/coffee.png);
     background-position: 0px 200px;
-
+    background-repeat: repeat-x;
+    border-radius: 0 0 70px 70px;
+    border: 8px solid black;
+    box-shadow:  1px 1px 10px -2px;
+    height: 170px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-85px) translateX(-100px);
+    width: 200px;
 }
 
 @keyframes fill {
@@ -34,13 +33,13 @@
 }
 
 .handle{
-    height: 70px;
-    width: 40px;
-    border: 8px solid black;
-    position: relative;
-    left: 188px;
-    top: 2px;
     border-radius: 0 25px 80px 0px;
+    border: 8px solid black;
+    height: 70px;
+    left: 188px;
+    position: relative;
+    top: 2px;
+    width: 40px;
 }
 
 .welcome {
@@ -49,9 +48,9 @@
 }
 
 .welcome p {
-    position: absolute;
-    top: 60%;
-    text-align: center;
     font-family: "Lucida Console", Courier, monospace;
     font-size: calc(2rem + 1vh);
+    position: absolute;
+    text-align: center;
+    top: 60%;
 }

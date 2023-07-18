@@ -3,14 +3,14 @@
 }
 
 .contactMe > .content {
-    font-family: var(--text-font);
-    font-size: var(--text-fs);
+    align-items: center;
     display: flex;
     flex-direction: column;
+    font-family: var(--text-font);
+    font-size: var(--text-fs);
     justify-content: center;
-    align-items: center;
-    text-align: center;
     min-height: 500px;
+    text-align: center;
 }
 
 .contactMe > .content > * {
@@ -18,19 +18,18 @@
 }
 
 .content > span{
-    font-size: var( --sectionheader-fs);
     color: var(--emphasis-color);
+    font-size: var( --sectionheader-fs);
     font-weight: 900;
 }
 
 .contactMe .button {
+    border-radius: 10px;
     border: black solid 2px;
+    cursor: pointer;
     max-width: max-content;
     padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
     transition: ease 0.5s;
-
 }
 
 .contactMe .button:hover {

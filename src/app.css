@@ -77,29 +77,29 @@ section {
 }
 
 .section-name {
-    font-family: var(--main-font);
+    align-items: center;
     color: var(--header-color);
-    text-align: left;
     display: flex;
-    max-height: var(--sectionheader-fs);
+    font-family: var(--main-font);
     font-size: var(--sectionheader-fs);
     font-weight: bold;
-    align-items: center;
+    max-height: var(--sectionheader-fs);
+    text-align: left;
 }
 /*------------------------------*/
 
 .nav-container {
+    align-items: center;
     background-color: var(--navbar-container);
+    box-shadow: 1px 1px 10px 1px;
     display: flex;
     height: var(--nav-container-height);
-    align-items: center;
     justify-content: space-between;
     padding: 10px 40px;
-    box-shadow: 1px 1px 10px 1px;
     position: sticky;
-    width: 100%;
-    top: 0;
     right: 0;
+    top: 0;
+    width: 100%;
     z-index: var(--nav-container-order);
 }
 
@@ -134,11 +134,11 @@ section {
 }
 
 .App > .content {
-    min-height: 100vh;
-    flex: 1;
     background-color: var(--main-bg-color);
-    padding: 0px 80px;
+    flex: 1;
     margin: 0 auto;
+    min-height: 100vh;
+    padding: 0px 80px;
 }
 
 @media only screen and (max-width: 450px) {

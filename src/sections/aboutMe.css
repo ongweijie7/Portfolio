@@ -1,10 +1,10 @@
 
 .about-me {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: calc(100vh - var(--nav-container-height));
+    display: flex;
     font-family: var(--text-font);    
+    justify-content: center;
+    min-height: calc(100vh - var(--nav-container-height));
 }
 
 .name {
@@ -30,38 +30,38 @@
 }
 
 .about-me .contact-me .icons {
-    font-size: 90px;
-    box-shadow: var(--shadow);
-    padding: 4px;
-    border: 2px solid black;
     border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: var(--shadow);
+    font-size: 90px;
+    padding: 4px;
     transition: transform 0.5s ease;
 }
 
 .about-me .contact-me .icons:hover {
-    transform: translateY(-3px);
     background-color: rgba(0, 0, 0, 0.2);
     color: rgba(155, 118, 83, 1);
+    transform: translateY(-3px);
 }
 
 
 .about-me .introduction {
-    box-sizing: border-box;
-    display: flex;
     align-items: center;
+    box-sizing: border-box;
     color: var(--text-color);
+    display: flex;
 }
 
 .about-me .information {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .about-me .information .profile-pic {
+    animation: 0.5 ease;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    animation: 0.5 ease;
     max-height: 600px;
     width: auto;
 }
@@ -74,11 +74,11 @@
 
 
 .about-me .description {
-    text-align: left;
-    min-width: 40ch;
-    max-width: 60ch;
     font-size: calc(var(--text-fs) - 0.2rem);
     margin-right: 20px;
+    max-width: 60ch;
+    min-width: 40ch;
+    text-align: left;
 }
 
 .description span {
@@ -100,9 +100,9 @@
     }
 
     .about-me .information {
-        margin-top: 100px;
-        justify-content: center;
         flex-direction: row;
+        justify-content: center;
+        margin-top: 100px;
     }
     .about-me .information > * {
         margin: 5vw;
@@ -126,7 +126,6 @@
         flex-direction: row;
         justify-content: center;
         padding: 0;
-        /* margin: 0; */
     }
 
     .about-me .information > * {
