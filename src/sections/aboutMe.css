@@ -65,10 +65,12 @@
     max-height: 600px;
     width: auto;
 }
-
-.about-me .profile-pic:hover {
-    transform: scale(1.03) rotate(-3deg);
+@media only screen and (max-width: 1000px) {
+    .about-me .profile-pic:hover {
+        transform: scale(1.03) rotate(-3deg);
+    }
 }
+
 
 .about-me .description {
     text-align: left;
