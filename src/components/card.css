@@ -4,6 +4,7 @@
     font-family: "Lucida Console", Courier, monospace;
     grid-template-columns: repeat(12, 1fr);
     margin-bottom: 200px;
+    align-items: center;
 }
 
 .project-card .project-img:nth-child(even) {
@@ -19,7 +20,7 @@
 .project-card .project-img {
     border-radius: 5px;
     box-shadow: var(--shadow);
-    max-height: 500px;
+    height: 500px;
     position: relative;
     z-index: var(--project-image-order);
 }
@@ -59,7 +60,7 @@
 
 .project-card .description {
     color: var(--text-color);
-    font-size: var(--text-fs);
+    font-size: calc(var(--text-fs) - 0.4rem);
     margin: auto;
     position: relative;
     z-index: var(--project-description-order);

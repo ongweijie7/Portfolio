@@ -1,23 +1,27 @@
-import ProHub from "../assets/ProHub.png";
-import JbBlog from "../assets/JbBlog.png";
-
-import { FaReact, FaCss3Alt } from "react-icons/fa";
+import { FaCss3Alt, FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
-import { SiMongodb, SiFirebase} from "react-icons/si";
+import { SiFirebase, SiMongodb } from "react-icons/si";
 
-
+import JbBlog from "../assets/JbBlog.png";
+import ProHub from "../assets/ProHub.png";
 
 export const projects = [
     {
         title: "Pro Hub",
         img: ProHub,
-        highlights: "This was a full-stack application built over year 1 summer with the aim of boosting the productivity of students and help fellow students fight procrastination",
+        highlights: "Together with my partner, we created this full-stack application built over summer of 2021" 
+        + " We noticed how many students including ourselves were victims of procrastination."
+        + " Therefore, we design this application with the aim of using positive peer pressure"
+        + " to help fellow students fight procrastination",
         techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt]
     },
     {
         title: "JB Delights",
         img: JbBlog,
-        highlights: "A full-stack application built using MERN which was aimed at collating various JB itineraries for potential travellers",
+        highlights: "During one of my itenary planning to JB, I noticed how much of the information was scattered"
+        + " which resulted in inefficient research"
+        + " Hence, this full-stack application was designed to consolidate important information"
+        + " such as the address, estimated cost and other common details for the ease of users",
         techstacks: [FaReact, SiMongodb, RiJavascriptFill, FaCss3Alt]
     },
 ]

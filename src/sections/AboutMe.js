@@ -11,11 +11,10 @@ const AboutMe = () => {
     
 
     let introduction= "I am an aspiring developer, currently in my *penultimate year of Computer Science* at NUS."
-    + "My primary interest lies in the field of *artificial intelligence* for I "
-    + "am intrigued by how it can be harnessed to enhance our daily lives."
-    + " I relish the opportunity to meet like-minded individuals and engage in discussions about possible solutions to problems we commonly face." 
-    + " Beyond academics, I try to lead a balanced lifestyle with regular gym workouts and occasional runs.\n\n"
-    + "Currently, I am interning as a *full stack developer at IDEMIA* while also working on my side projects."
+    + " I am looking to specialise in the field of *artificial intelligence* for I"
+    + " am intrigued by how it can be harnessed to enhance our daily lives."
+    + " I enjoy meeting like-minded individuals and discussing about possible tech solutions to common problems." 
+    + " In my free time, I try to lead a balanced lifestyle with regular gym workouts and occasional runs.\n\n"
     + " Here are some of the technologies I have worked with *React*, *Firebase*, *ExpressJs*, *MongoDb*, *Java Spring boot*."
     const highlightWords = (text) => {
         const regex = /\*(.*?)\*/g;
