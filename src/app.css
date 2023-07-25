@@ -40,7 +40,7 @@
     --navbar-titles-fs: calc(2rem + 1.5vh);
 
     /**For resizing**/
-    --text-fs-1000 : calc(0.8rem + 1.3vw);
+    --text-fs-1000 : calc(0.7rem + 1.3vw);
     
 
     --main-font: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -72,7 +72,7 @@ section {
 
 .emphasis {
     color: var(--emphasis-color);
-    font-weight: 700;
+    font-weight: 900;
     text-decoration: underline;
 }
 .page-container {

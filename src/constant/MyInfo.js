@@ -32,7 +32,7 @@ export const work = [
         company: "IDEMIA",
         duration: "May 2023 - Present",
         achievements: ["Played a pivotal role in implementing an electronic server designed to process requests from frontend devices, enhancing system responsiveness",
-        "Employed Java Spring Boot to work with both SOAP and REST API, creating integration test cases with REST Assured",
+        "Employed Java Spring Boot to work with both SOAP and REST API. Performed Integration tests with JUnit and Hamcrest",
         "Conducted comprehensive integration tests using SOAPUI and Postman, ensuring seamless system operations",
         "Regularly participated in biweekly sprint meetings, contributing to team strategy and project coordination"]
     }
