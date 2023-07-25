@@ -32,14 +32,14 @@ const AboutMe = () => {
 
     const fadeInVariants = {
         hidden: { opacity: 0, y: -20 }, // Starting position above the element's top
-        visible: { opacity: 1, y: 0,  transition: { staggerChildren: 0.5, } },
+        visible: { opacity: 1, y: 0,  transition: { staggerChildren: 0.8, } },
          // Ending position at the element's original position
     };
 
     const item = {
         hidden: {opacity: 0},  // Starting position above the element's top
         visible: {opacity: 1},
-        transition: {ease: 'easeInOut'}
+        transition: {ease: 'linear'}
     };
 
     return (
@@ -54,7 +54,7 @@ const AboutMe = () => {
                     <div className="introduction">
                      <motion.div variants={item}>{introduction}</motion.div>
                         <div className="information">
-                            <img className="profile-pic" src={profilePic}/>    
+                            <motion.img variants={item} className="profile-pic" src={profilePic}/>    
                             <ul className="contact-me">
                                 <li onClick={() => redirectTo(githubLink)}><FaGithub className="icons"/></li>
                                 <li onClick={() => redirectTo(linkedinlink)}><FaLinkedin className="icons"/></li>
