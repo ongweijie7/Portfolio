@@ -1,4 +1,4 @@
-import "./transition.css";
+import "./loadingAnimation.css";
 
 const LoadingAnimation = () => {
     return (

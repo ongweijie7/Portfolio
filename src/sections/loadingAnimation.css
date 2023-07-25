@@ -22,13 +22,13 @@
         background-position: -450px 140px;
     }
     40% {
-        background-position: -900px 50px;
+        background-position: -900px 84px;
     }
     80% {
-        background-position: -1350px -30px;
+        background-position: -1350px 30px;
     }
     100% {
-        background-position: 0px 200px;
+        background-position: -1750px -25px;
     }
 }
 
