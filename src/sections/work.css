@@ -129,7 +129,7 @@
     }
 
     .work-card .job-intro {
-        min-height: 600px;
+        min-height: 500px;
         min-width: 0;
         font-size: var(--text-fs-1000);
     }

@@ -29,16 +29,12 @@ const Work = () => {
                     <div 
                     className={`button ${selected === 1 ? 'active' : ''}`}
                     onClick={() => handleTabClick(1, IDEMIA)}><p>IDEMIA</p></div>
-                    <div 
-                    className={`button ${selected === 2 ? 'active' : ''}`}
-                    onClick={() => handleTabClick(2, null)}><p>Coming Soon</p></div>
                 </div>
 
                 <div className="job-intro">
                     {selected === 1 && <img src={IDEMIA} alt=""/>}
                     {/* {selected == 2 && <img src={IDEMIA} alt=""/>} */}
                     {selected === 0 && <p>Click to find out more</p>}
-                    {selected === 2 && <p>Unfortunately, I am currently still on my first internship! Will update once I have embarked upon my next learning experience!</p>}
                     {work.map((work, index) => {
                         return(<>
                             {selected === index+1 && 
