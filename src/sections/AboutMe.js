@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa"
 
 import profilePic from "../assets/me.jpeg"
@@ -24,34 +25,44 @@ const AboutMe = () => {
     };
 
     introduction = highlightWords(introduction);
-    console.log(introduction)
+
     const redirectTo = (link) => {
         window.open(link, "_blank");
-    
+    };
+
+    const fadeInVariants = {
+        hidden: { opacity: 0, y: -20 }, // Starting position above the element's top
+        visible: { opacity: 1, y: 0,  transition: { staggerChildren: 0.5, } },
+         // Ending position at the element's original position
+    };
+
+    const item = {
+        hidden: {opacity: 0},  // Starting position above the element's top
+        visible: {opacity: 1},
+        transition: {ease: 'easeInOut'}
     };
 
     return (
         <section className="about-me">
-            
-            
-
-
-            <div className="card">
-                <h1 className="section-name">01. About Me</h1>
-                <span className="name">Hi I am <span>Wei Jie</span>,</span>
-                <div className="introduction">
-                     {introduction}
-                     <div className="information">
-                        <img className="profile-pic" src={profilePic}/>    
-                        <ul className="contact-me">
-                            <li onClick={() => redirectTo(githubLink)}><FaGithub className="icons"/></li>
-                            <li onClick={() => redirectTo(linkedinlink)}><FaLinkedin className="icons"/></li>
-                            <li onClick={() => redirectTo(instagramLink)}><FaInstagramSquare className="icons"/></li>
-                        </ul>
-                     </div>
-                </div>
-            </div>
-            
+            <motion.div className="card"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInVariants} 
+            >
+            <motion.h1 variants={item} className="section-name">01. About Me</motion.h1>
+                <motion.div variants={item}><span className="name">Hi I am <span>Wei Jie</span>,</span></motion.div>
+                    <div className="introduction">
+                     <motion.div variants={item}>{introduction}</motion.div>
+                        <div className="information">
+                            <img className="profile-pic" src={profilePic}/>    
+                            <ul className="contact-me">
+                                <li onClick={() => redirectTo(githubLink)}><FaGithub className="icons"/></li>
+                                <li onClick={() => redirectTo(linkedinlink)}><FaLinkedin className="icons"/></li>
+                                <li onClick={() => redirectTo(instagramLink)}><FaInstagramSquare className="icons"/></li>
+                            </ul>
+                        </div>
+                    </div>
+            </motion.div>
         </section>
     );
 }

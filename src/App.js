@@ -1,15 +1,16 @@
+import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import { Link, useNavigate } from "react-router-dom";
 
 import WJ from "./assets/wj-icon.png";
 import Navbar from "./components/Navbar";
 import AboutMe from "./sections/AboutMe";
-import Project from "./sections/Project";
-import Work from "./sections/Work";
 import ContactMe from "./sections/ContactMe";
 import LoadingAnimation from "./sections/LoadingAnimation";
+import Project from "./sections/Project";
+import Work from "./sections/Work";
 
 import "./app.css";
 
@@ -82,6 +83,13 @@ function App() {
     }
   }, [about, work, project, contactMe]);
 
+  /*For framer animation */
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: -20 }, // Starting position above the element's top
+    visible: { opacity: 1, y: 0,  transition: { delay : 0.3, } },
+     // Ending position at the element's original position
+  };
+
   return (
     <>
     {loading 
@@ -89,10 +97,10 @@ function App() {
     : <div className="App">
         <div className={`page-container ${navbar ? 'transformed' : ''}`}>
           <div className="nav-container" >
-            <Link to="/" className="reload"><img src={WJ}/></Link>
-            <div onClick={showNav}>
+            <Link to="/" className="reload"><motion.img variants={fadeInVariants} initial="hidden" animate="visible"  src={WJ}/></Link>
+            <motion.div initial="hidden" animate="visible" variants={fadeInVariants} onClick={showNav}>
                 {!navbar ? <FaBars className="nav-icon"/> : <ImCross className="nav-icon"/>}
-            </div>
+            </motion.div>
           </div>
           
           <div className="content">

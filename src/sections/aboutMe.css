@@ -7,6 +7,8 @@
     min-height: calc(100vh - var(--nav-container-height));
 }
 
+
+
 .name {
     font-size: var(--sectionheader-fs);
     font-weight: 700;
@@ -14,6 +16,7 @@
 
 .name > span {
     color: var(--emphasis-color);
+    display: "inline-block";
 }
 
 
@@ -79,6 +82,7 @@
     max-width: 60ch;
     min-width: 40ch;
     text-align: left;
+    display: inline-block;
 }
 
 .description span {
