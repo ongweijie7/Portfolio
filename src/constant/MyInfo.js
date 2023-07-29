@@ -31,10 +31,10 @@ export const work = [
         position: "Full Stack Developer Intern",
         company: "IDEMIA",
         duration: "May 2023 - Present",
-        achievements: ["Played a pivotal role in implementing an eServer designed to process requests from frontend devices, enhancing system responsiveness",
-        "Employed Java Spring Boot to work with both SOAP and REST API.",
-        "Conducted comprehensive integration tests with JUnit and Hamcrest alongside SOAP UI and Postman, ensuring seamless system operations",
-        "Regularly participated in biweekly sprint meetings, contributing to team strategy and project coordination"]
+        achievements: ["Assisted in implementation of an eServer designed to process requests from frontend devices, enhancing system responsiveness. Project is due to be deployed at Singapore terminals.",
+        "Employed the use of Java Spring Boot to work with both SOAP and REST API.",
+        "Conducted comprehensive integration tests with JUnit and Hamcrest alongside SOAP UI and Postman, ensuring seamless system operations.",
+        "Regularly participated in biweekly sprint meetings, contributing to team strategy and project coordination."]
     }
 ]
 

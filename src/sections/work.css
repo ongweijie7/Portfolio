@@ -1,5 +1,5 @@
 .work .job-intro img {
-    animation: fadeInAnimation 1s ease-in forwards;
+    animation: fadeInAnimation 2s ease-in forwards;
     display: block;
     inset: 0;
     margin: auto;
@@ -73,7 +73,7 @@
 
 @keyframes fadeInAnimation {
     from {opacity: 0;}
-    to {opacity: 0.25;}
+    to {opacity: 0.2;}
 }
 
 

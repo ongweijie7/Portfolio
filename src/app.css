@@ -74,7 +74,13 @@ section {
     color: var(--emphasis-color);
     font-weight: 900;
     text-decoration: underline;
+    
 }
+
+.emphasis:hover {
+    color: #335a9e;
+}
+
 .page-container {
     position: relative;
     flex: 1;
