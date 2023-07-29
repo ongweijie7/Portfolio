@@ -1,5 +1,5 @@
 .work .job-intro img {
-    animation: fadeInAnimation 2s ease-in forwards;
+    animation: fadeInAnimation 2s linear forwards;
     display: block;
     inset: 0;
     margin: auto;
