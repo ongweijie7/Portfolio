@@ -44,7 +44,7 @@
     display: flex;
     flex: 5;
     font-family: var(--text-font);
-    font-size: var(--text-fs);
+    font-size: calc(var(--text-fs) - 0.1rem);
     justify-content: center;
     min-width: 30ch;
     position: relative;
@@ -73,7 +73,7 @@
 
 @keyframes fadeInAnimation {
     from {opacity: 0;}
-    to {opacity: 0.3;}
+    to {opacity: 0.25;}
 }
 
 
@@ -138,4 +138,20 @@
     .work-card .job-intro .title{
         font-size: calc(var(--text-fs-1000) + 0.3rem);
     }
+}
+
+@media only screen and (max-height: 900px) {
+    .work-card {
+        max-height: 500px;
+    }
+
+    .work-card .job-intro {
+        font-size: calc(var(--text-fs) - 0.3rem);
+    }
+
+
+    .work-card .buttons {
+        min-height: 300px;
+    }
+
 }
