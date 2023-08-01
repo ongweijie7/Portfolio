@@ -11,7 +11,7 @@ export const projects = [
         img: ProHub,
         highlights: "Together with my partner, we created this full-stack application built over summer of 2021" 
         + " We noticed how many students including ourselves were victims of procrastination."
-        + " Therefore, we design this application with the aim of using positive peer pressure"
+        + " \\n \\n Therefore, we design this application with the aim of using positive peer pressure"
         + " to help fellow students fight procrastination",
         techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt]
     },
@@ -20,7 +20,7 @@ export const projects = [
         img: JbBlog,
         highlights: "During one of my itenary planning to JB, I noticed how much of the information was scattered"
         + " which resulted in inefficient research"
-        + " Hence, this full-stack application was designed to consolidate important information"
+        + " \\n \\n Hence, this full-stack application was designed to consolidate important information"
         + " such as the address, estimated cost and other common details for the ease of users",
         techstacks: [FaReact, SiMongodb, RiJavascriptFill, FaCss3Alt]
     },

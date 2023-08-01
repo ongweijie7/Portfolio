@@ -11,6 +11,13 @@ const Card = ({ project, index }) => {
         Icons = Proj2;
     }
 
+    const replaceWithLineBreaks = (inputString) => {
+        const replacedString = inputString.replace(/\\n/g, '<br>');
+        return { __html: replacedString };
+    }
+
+
+
     const Image = () => {
         return (
              <div className="project-img">
@@ -22,7 +29,7 @@ const Card = ({ project, index }) => {
     const Description = ({index}) => {
         return (<div className="description">
                     <h1>{project.title}</h1>
-                    <p className="highlights"> {project.highlights}</p>
+                    <p className="highlights" dangerouslySetInnerHTML={replaceWithLineBreaks(project.highlights)}></p>
                     <div className={`techstacks ${index%2!=0? "isOdd":""}`}>
                         <Icons/>
                     </div>
