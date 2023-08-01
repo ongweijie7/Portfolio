@@ -135,23 +135,25 @@
         font-size: var(--text-fs-1000);
     }
 
-    .work-card .job-intro .title{
+    .work-card .job-intro .title {
         font-size: calc(var(--text-fs-1000) + 0.3rem);
     }
 }
 
 @media only screen and (max-height: 900px) {
-    .work-card {
-        max-height: 500px;
-    }
 
     .work-card .job-intro {
-        font-size: calc(var(--text-fs) - 0.3rem);
+        font-size: var(--text-fs-1000);
     }
 
-
     .work-card .buttons {
-        min-height: 300px;
+        min-height: 50px;
+    }
+
+    .work-card .buttons p {
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
     }
 
 }

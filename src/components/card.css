@@ -174,14 +174,14 @@
         padding: 10px 0;
     }
 
-    @media only screen and (max-width: 550px) {
-        .project-card .description {
-            font-size: 20px;
-            padding: 10px;
-        }
-        .project-card .techstacks .icon {
-            font-size: 50px;
-        }
-
+@media only screen and (max-width: 550px) {
+    .project-card .description {
+        font-size: 18px;
+        padding: 10px;
     }
+    .project-card .techstacks .icon {
+        font-size: 50px;
+    }
+
+}
 }
