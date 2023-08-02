@@ -40,7 +40,7 @@
     --navbar-titles-fs: calc(2rem + 1.5vh);
 
     /**For resizing**/
-    --text-fs-1000 : calc(0.7rem + 1.3vw);
+    --text-fs-1000 : calc(0.7rem + 0.6vw + 0.6vh);
     
 
     --main-font: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -61,12 +61,14 @@ body {
 section {
     margin: auto;
     max-width: 1000px;
-    padding: 150px 30px;
+    padding: 100px 30px;
+    /* padding-top: var(--nav-container-height); */
+    /* box-sizing: content-box; */
 }
 
 @media only screen and (max-width: 500px) {
     section {
-        padding: 100px 15px 0 15px ;
+        padding: 30px 15px 100px 15px ;
     }
 }
 

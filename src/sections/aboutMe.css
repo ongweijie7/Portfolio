@@ -4,7 +4,7 @@
     display: flex;
     font-family: var(--text-font);    
     justify-content: center;
-    min-height: calc(100vh - var(--nav-container-height));
+    min-height: calc(80vh - var(--nav-container-height));
 }
 
 
@@ -38,13 +38,13 @@
     box-shadow: var(--shadow);
     font-size: 90px;
     padding: 4px;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s linear;
 }
 
 .about-me .contact-me .icons:hover {
     background-color: rgba(0, 0, 0, 0.2);
     color: rgba(155, 118, 83, 1);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 
@@ -62,7 +62,7 @@
 }
 
 .about-me .information .profile-pic {
-    animation: 0.5 ease;
+    transition: transform 0.5s ease, box-shadow 2s ease;
     border-radius: 10px;
     box-shadow: var(--shadow);
     max-height: 600px;
@@ -71,7 +71,8 @@
 
 @media only screen and (min-width: 1000px) {
     .about-me .profile-pic:hover {
-        transform: scale(1.03) rotate(-3deg);
+        transform: scale(1.02);
+        box-shadow: 2px 2px 20px -1px;
     }
 }
 
@@ -90,7 +91,7 @@
     font-weight: 500;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1060px) {
     .about-me .introduction {
         display: block;
     }

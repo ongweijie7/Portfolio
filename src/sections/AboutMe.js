@@ -42,6 +42,19 @@ const AboutMe = () => {
         transition: {ease: 'linear'}
     };
 
+    //ToDo fix this animation
+    const fadeInVariantsIcons = {
+        hidden: { opacity: 0, y: -20 }, // Starting position above the element's top
+        visible: { opacity: 1, y: 0,  transition: { staggerChildren: 0.8, delay: 3 } },
+         // Ending position at the element's original position
+    };
+
+    const dropDownItem = {
+        hidden: { opacity: 0, y: -20 }, // Starting position above the element's top
+        visible: { opacity: 1, y: 0},
+        transition: {ease: 'linear'}
+    }
+
     return (
         <section className="about-me">
             <motion.div className="card"
@@ -55,11 +68,14 @@ const AboutMe = () => {
                      <motion.div variants={item}>{introduction}</motion.div>
                         <div className="information">
                             <motion.img variants={item} className="profile-pic" src={profilePic}/>    
-                            <ul className="contact-me">
-                                <li onClick={() => redirectTo(githubLink)}><FaGithub className="icons"/></li>
-                                <li onClick={() => redirectTo(linkedinlink)}><FaLinkedin className="icons"/></li>
-                                <li onClick={() => redirectTo(instagramLink)}><FaInstagramSquare className="icons"/></li>
-                            </ul>
+                            <motion.ul className="contact-me"
+                            initial="hidden"
+                            animate="visible"
+                            variants={fadeInVariantsIcons} >
+                                <motion.li variants={dropDownItem} onClick={() => redirectTo(githubLink)}><FaGithub className="icons"/></motion.li>
+                                <motion.li variants={dropDownItem} onClick={() => redirectTo(linkedinlink)}><FaLinkedin className="icons"/></motion.li>
+                                <motion.li variants={dropDownItem} onClick={() => redirectTo(instagramLink)}><FaInstagramSquare className="icons"/></motion.li>
+                            </motion.ul>
                         </div>
                     </div>
             </motion.div>

@@ -22,6 +22,7 @@
     flex-direction: column;
     min-height: calc(700px);
     text-decoration: none;
+    margin-right: 10px;
 }
 
 .work-card .buttons .button {
@@ -37,6 +38,8 @@
     justify-content: center;
     padding: 20px;
     text-align: center;
+    background-color: rgb(211, 211, 211, 0.15);
+    border-radius: 3px;
 }
 
 .work-card .job-intro {
@@ -79,6 +82,7 @@
 
 .work-card .buttons .active {
     border-left: 3px solid black; 
+    background-color: transparent;
 }
 
 
@@ -143,7 +147,7 @@
 @media only screen and (max-height: 900px) {
 
     .work-card .job-intro {
-        font-size: calc(var(--text-fs-1000) - 0.3rem);
+        font-size: calc(var(--text-fs-1000) - 0.15rem);
     }
 
     .work-card .buttons {
