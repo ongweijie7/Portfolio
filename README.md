@@ -3,10 +3,6 @@ This repository contains the source code for my personal portfolio, designed to 
 
 Site link: https://ongweijie7.github.io/Portfolio/
 
-## Technologies Used
-React, CSS, HTML, Framer Motion
-
 <br>
 
-
-![My animated logo](assets/preview.png)
+> <kbd> ![My animated logo](assets/preview.png) <kbd>
