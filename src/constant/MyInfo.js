@@ -13,7 +13,8 @@ export const projects = [
         + " We noticed how many students including ourselves were victims of procrastination."
         + " \\n \\n Therefore, we design this application with the aim of using positive peer pressure"
         + " to help fellow students fight procrastination",
-        techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt]
+        techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt],
+        githubLink: "https://github.com/ongweijie7/ProHub"
     },
     {
         title: "JB Delights",
@@ -22,7 +23,8 @@ export const projects = [
         + " which resulted in inefficient research"
         + " \\n \\n Hence, this full-stack application was designed to consolidate important information"
         + " such as the address, estimated cost and other common details for the ease of users",
-        techstacks: [FaReact, SiMongodb, RiJavascriptFill, FaCss3Alt]
+        techstacks: [FaReact, SiMongodb, RiJavascriptFill, FaCss3Alt],
+        githubLink: "https://github.com/ongweijie7/JBDelights"
     },
 ]
 

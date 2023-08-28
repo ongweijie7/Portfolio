@@ -43,8 +43,13 @@
     z-index: var(--project-image-overlay-order);
 }
 
-.project-card .overlay:hover{
+.project-card .overlay:hover {
     background-color: transparent;
+    cursor: pointer;
+}
+
+.project-card .overlay:hover + img {
+    transform: translateY(-3px);
 }
 
 .project-card .description:nth-child(even) {

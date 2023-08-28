@@ -16,13 +16,16 @@ const Card = ({ project, index }) => {
         return { __html: replacedString };
     }
 
-
+    const openGithubRepo = (link) => {
+        window.open(link, "_blank");
+        console.log("hello");
+    }
 
     const Image = () => {
         return (
-             <div className="project-img">
+             <div className="project-img" >
                 <img src={project.img}/>
-                <div className="overlay"></div>
+                <div className="overlay" onClick={() => openGithubRepo(project.githubLink)}></div>
             </div>)
     }
     
