@@ -52,7 +52,7 @@ function App() {
 
   /*For toggling the navbar */
   const [navbar, setNavbar] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const showNav = () => {
       setNavbar(!navbar);
