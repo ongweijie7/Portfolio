@@ -1,14 +1,16 @@
 import placeholder from "../assets/placeholder.png";
-import { Proj1, Proj2 } from "../constant/MyInfo";
+import { Proj1, Proj2, Proj3 } from "../constant/MyInfo";
 
 import "./card.css";
 
 const Card = ({ project, index }) => {
     let Icons = null;
-    if (index == 0) {
+    if (index === 0) {
         Icons = Proj1;
-    } else {
+    } else if (index === 1) {
         Icons = Proj2;
+    } else {
+        Icons = Proj3;
     }
 
     const replaceWithLineBreaks = (inputString) => {
@@ -33,7 +35,7 @@ const Card = ({ project, index }) => {
         return (<div className="description">
                     <h1>{project.title}</h1>
                     <p className="highlights" dangerouslySetInnerHTML={replaceWithLineBreaks(project.highlights)}></p>
-                    <div className={`techstacks ${index%2!=0? "isOdd":""}`}>
+                    <div className={`techstacks ${index%2!==0? "isOdd":""}`}>
                         <Icons/>
                     </div>
                 </div>)
@@ -43,7 +45,7 @@ const Card = ({ project, index }) => {
     return (
         
         <div className="project-card">
-            { index % 2 == 0 ?
+            { index % 2 === 0 ?
             <>
                 <Image/>
                 <Description index={index}/>

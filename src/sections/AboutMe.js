@@ -11,12 +11,10 @@ const AboutMe = () => {
     const instagramLink = "https://www.instagram.com/wei._.jiee/";
     
 
-    let introduction= "I am an aspiring developer, currently in my *penultimate year of Computer Science* at NUS."
-    + " I am looking to specialise in the field of *artificial intelligence* for I"
-    + " am intrigued by how it can be harnessed to enhance our daily lives."
-    + " I enjoy meeting like-minded individuals and discussing about possible tech solutions to common problems." 
-    + " In my free time, I try to lead a balanced lifestyle with regular gym workouts and occasional runs.\n\n"
-    + " Here are some of the technologies I have worked with *React*, *Firebase*, *ExpressJs*, *MongoDb*, *Java Spring boot*."
+    let introduction= "I am Computer Science student at National University of Singapore graduating in 2025 and"
+    + " I am pursuing a duo specialisation in *Software Engineering* and *Artificial Intelligence*."
+    + " I really enjoy building cool solutions to solve problems I experience in my life & love meeting like-minded individuals who enjoy problem solving too!" 
+    + " \n\n Here are some of the technologies I have worked extensively with *React/React-Native*, *Nestjs, *Expressjs*, *Java Spring Boot*, *AWS*, *Firebase*, *MongoDb*."
     const highlightWords = (text) => {
         const regex = /\*(.*?)\*/g;
         const highlightedText = text.replace(regex, '<span className="highlight">$1</span>').replace(/\n/g, '<br/>');

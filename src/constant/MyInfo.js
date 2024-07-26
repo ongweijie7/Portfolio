@@ -4,8 +4,18 @@ import { SiFirebase, SiMongodb } from "react-icons/si";
 
 import JbBlog from "../assets/JbBlog.png";
 import ProHub from "../assets/ProHub.png";
+import Spuddi from "../assets/Spuddi.png";
 
 export const projects = [
+    {
+        title: "Spuddi",
+        img: Spuddi,
+        highlights: "This full-stack application was created as a prototype for a cooperathon which is Canada's biggest innovation challenge." 
+        + " \\n \\n It leverages on multiple generative AI models including Whisper & GPT to converse with beginners in a new language."
+        + " We  were shortlisted as finalist amongst 6 teams in the competition",
+        // techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt],
+        githubLink: "https://github.com/ongweijie7/ProHub"
+    },
     {
         title: "Pro Hub",
         img: ProHub,
@@ -14,7 +24,7 @@ export const projects = [
         + " \\n \\n Therefore, we design this application with the aim of using positive peer pressure"
         + " to help fellow students fight procrastination",
         techstacks: [FaReact, SiFirebase, RiJavascriptFill, FaCss3Alt],
-        githubLink: "https://github.com/ongweijie7/ProHub"
+        githubLink: "https://github.com/ongweijie7/spuddy-backend"
     },
     {
         title: "JB Delights",
@@ -25,7 +35,7 @@ export const projects = [
         + " such as the address, estimated cost and other common details for the ease of users",
         techstacks: [FaReact, SiMongodb, RiJavascriptFill, FaCss3Alt],
         githubLink: "https://github.com/ongweijie7/JBDelights"
-    },
+    }
 ]
 
 export const work = [
@@ -62,7 +72,6 @@ export const work = [
 export const Proj1 = () => {
     return (<>
             <div className="icon-container"><FaReact className="icon"/> <p>React Native</p></div>
-            <div className="icon-container"><SiFirebase className="icon"/> <p>Firebase</p></div>
             <div className="icon-container"><FaCss3Alt className="icon"/> <p>CSS</p></div>
             <div className="icon-container"><RiJavascriptFill className="icon"/><p>Javascript</p></div>
             </>)
@@ -74,5 +83,14 @@ export const Proj2 = () => {
             <div className="icon-container"><SiMongodb className="icon"/> <p>MongoDB</p></div>
             <div className="icon-container"><FaCss3Alt className="icon"/> <p>CSS</p></div>
             <div className="icon-container"><RiJavascriptFill className="icon"/> <p>Javascript</p></div>
+            </>)
+}
+
+export const Proj3 = () => {
+    return (<>
+            <div className="icon-container"><FaReact className="icon"/> <p>React Native</p></div>
+            <div className="icon-container"><SiFirebase className="icon"/> <p>Firebase</p></div>
+            <div className="icon-container"><FaCss3Alt className="icon"/> <p>CSS</p></div>
+            <div className="icon-container"><RiJavascriptFill className="icon"/><p>Javascript</p></div>
             </>)
 }
