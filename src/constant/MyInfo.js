@@ -30,13 +30,32 @@ export const projects = [
 
 export const work = [
     {
+        position: "Software Engineer Intern",
+        company: "Mavennet",
+        duration: "Jan 2024 - Dec 2024",
+        achievements: [
+            "Work in a fast-paced & dynamic blockchain consulting start-up in Toronto, developing a full-stack financial platform using Nest.js & React for efficient blockchain currency transactions",
+            "Led the encryption of sensitive personal information in RDS database with AWS KMS, ensuring 100% encryption of all personal information, with appropriate decryption across various endpoints",
+            "Collaborated extensively with product manager to scope out features based on client requirements",
+            "Created stable migration scripts for seamless data handling in production, reducing downtime & data inconsistencies",
+            "Implemented comprehensive integration & smoke tests with Postman, ensuring robust end-to-end testing",
+            "Utilized various AWS services (CloudFormation, Lambda) for efficient deployment & infrastructure management, ensuring stable deployments with Sentry, Flagsmith & API versioning",
+            "Integrated & worked with blockchain APIs (Balance, Fireblocks, Infura & Quicknode etc.)"
+        ]
+    },
+    {
         position: "Full Stack Developer Intern",
         company: "IDEMIA",
-        duration: "May 2023 - Present",
-        achievements: ["Assisted in implementation of an eServer designed to process requests from frontend devices, enhancing system responsiveness. Project is due to be deployed at Singapore terminals.",
-        "Employed the use of Java Spring Boot to work with both SOAP and REST API.",
-        "Conducted comprehensive integration tests with JUnit and Hamcrest alongside SOAP UI and Postman, ensuring seamless system operations.",
-        "Regularly participated in biweekly sprint meetings, contributing to team strategy and project coordination."]
+        duration: "May 2023 - Nov 2023",
+        achievements: [
+        "Developed a Java Spring Boot server deployed at Singapore’s airport terminals, assisting duty officers in ensuring smooth & secure transitions for millions of travelers annually",
+        "Built a timeout feature using Scheduler with a cron timer to manage officer sessions in the in-memory data grid (Hazelcast), enhancing system reliability",
+        "Led the implementation of Logback for server logging, establishing a time-based rolling policy for log files",
+        "Implemented interceptors to remove sensitive information from requests, ensuring compliance with data privacy standards",
+        "Refactored the codebase using OOP practices & Spring Boot annotations, simplifying software maintenance",
+        "Created extensive unit & integration tests using JUnit, Hamcrest, SOAPUI & Postman to ensure seamless system operations",
+        "Documented all endpoints using GitHub markdown, improving onboarding & knowledge sharing among developers"
+        ]
     }
 ]
 

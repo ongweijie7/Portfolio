@@ -12,7 +12,7 @@
 .work-card {
     display: flex;
     margin-top: 100px;
-    max-height: 800px;
+    max-height: 1000px;
     min-height: 550px;
 }
 
@@ -49,7 +49,7 @@
     font-family: var(--text-font);
     font-size: calc(var(--text-fs) - 0.1rem);
     justify-content: center;
-    min-width: 30ch;
+    min-width: 35ch;
     position: relative;
 }
 
@@ -82,7 +82,7 @@
 
 .work-card .buttons .active {
     border-left: 3px solid black; 
-    background-color: transparent;
+    background-color: lightgray;
 }
 
 

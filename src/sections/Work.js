@@ -1,9 +1,8 @@
-import Button from '@mui/material/Button';
-import * as React from 'react';
-import { useState } from "react";
-import { work } from '../constant/MyInfo'; 
+import { useState } from "react"
+import { work } from '../constant/MyInfo'
 
-import IDEMIA from "../assets/IDEMIA.png";
+import IDEMIA from "../assets/IDEMIA.png"
+import Mavennet from "../assets/Mavennet.png"
 
 import "./work.css";
 
@@ -27,26 +26,29 @@ const Work = () => {
             <div className="work-card">
                 <div className="buttons">
                     <div 
-                    className={`button ${selected === 1 ? 'active' : ''}`}
-                    onClick={() => handleTabClick(1, IDEMIA)}><p>IDEMIA</p></div>
+                        className={`button ${selected === 1 ? 'active' : ''}`}
+                        onClick={() => handleTabClick(1, Mavennet)}><p>Mavennet</p>
+                    </div>
+                    <div 
+                        className={`button ${selected === 2 ? 'active' : ''}`}
+                        onClick={() => handleTabClick(2, IDEMIA)}><p>IDEMIA</p>
+                    </div>
                 </div>
 
-                <div className="job-intro">
-                    {selected === 1 && <img src={IDEMIA} alt=""/>}
-                    {/* {selected == 2 && <img src={IDEMIA} alt=""/>} */}
+                <div className="job-intro">                    
                     {selected === 0 && <p>Click to find out more</p>}
                     {work.map((work, index) => {
                         return(<>
                             {selected === index+1 && 
-                            <div className="details">
-                            <p className="title">{work.position} <span onClick={redirectToIdemia} className="emphasis">@{work.company}</span></p>
-                            <p>{work.duration}</p>
-                            <ul>
-                                {work.achievements.map((elements) => {
-                                    return <li>{elements}</li>
-                                })}
-                            </ul>
-                            </div>}
+                            (<><img src={img} alt="" /><div className="details">
+                                <p className="title">{work.position} <span onClick={redirectToIdemia} className="emphasis">@{work.company}</span></p>
+                                <p>{work.duration}</p>
+                                <ul>
+                                    {work.achievements.map((elements) => {
+                                        return <li>{elements}</li>;
+                                    })}
+                                </ul>
+                            </div></>)}
                             </>)
                     })}
                     

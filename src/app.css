@@ -32,7 +32,7 @@
     /*Font-sizes*/
     --sectionheader-fs: calc(1.5rem + 1vh);
     --subheader-fs: calc(1rem + 1vh);
-    --text-fs: calc(1.5rem + 0.5vh);
+    --text-fs: calc(1.4rem + 0.3vh);
     
     /**For titles in the navbar**/
     --nav-container-height: calc(3.5rem + 5vh);
@@ -117,7 +117,7 @@ section {
     z-index: var(--nav-container-order);
 }
 
-.nav-container .reload {
+.nav-container .wj-icon {
     cursor: pointer;
 }
 
@@ -132,6 +132,10 @@ section {
     font-size: var(--nav-container-fs);
     cursor: pointer;
     margin-right: 30px;
+}
+
+.nav-icon:hover {
+    color: lightgray;
 }
 
 .section-name::after {

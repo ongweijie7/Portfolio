@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import { Link, useNavigate } from "react-router-dom";
 
 import WJ from "./assets/wj-icon.png";
 import Navbar from "./components/Navbar";
@@ -53,19 +52,19 @@ function App() {
 
   /*For toggling the navbar */
   const [navbar, setNavbar] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const showNav = () => {
       setNavbar(!navbar);
   }
   
-  useEffect (() => {
+  useEffect(() => {
     const timeout = setTimeout(() => {
-        setLoading(false) // Replace '/' with the URL of your main page
+        setLoading(false)
     }, 3000);
 
     return () => clearTimeout(timeout);
-  })
+  }, [])
 
   useEffect(() => {
     if (about) {
@@ -90,6 +89,10 @@ function App() {
      // Ending position at the element's original position
   };
 
+  const reload = () => {
+    window.location.reload();
+  }
+
   return (
     <>
     {loading 
@@ -97,7 +100,7 @@ function App() {
     : <div className="App">
         <div className={`page-container ${navbar ? 'transformed' : ''}`}>
           <div className="nav-container" >
-            <Link to="/" className="reload"><motion.img variants={fadeInVariants} initial="hidden" animate="visible"  src={WJ}/></Link>
+            <motion.img className="wj-icon" variants={fadeInVariants} initial="hidden" animate="visible"  src={WJ} onClick={() => reload()}/>
             <motion.div initial="hidden" animate="visible" variants={fadeInVariants} onClick={showNav}>
                 {!navbar ? <FaBars className="nav-icon"/> : <ImCross className="nav-icon"/>}
             </motion.div>
