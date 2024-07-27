@@ -10,8 +10,8 @@ const Work = () => {
     const [selected, setSelected] = useState(0);
     const [img, setImg] = useState(null);
 
-    const redirectToIdemia = () => {
-        window.open("https://www.idemia.com/", "_blank");
+    const redirectToCompanySite = (link) => {
+        window.open(link, "_blank");
     }
 
     const handleTabClick = (index, img) => {
@@ -41,7 +41,7 @@ const Work = () => {
                         return(<>
                             {selected === index+1 && 
                             (<><img src={img} alt="" /><div className="details">
-                                <p className="title">{work.position} <span onClick={redirectToIdemia} className="emphasis">@{work.company}</span></p>
+                                <p className="title">{work.position} <span onClick={() => redirectToCompanySite(work.link)} className="emphasis">@{work.company}</span></p>
                                 <p>{work.duration}</p>
                                 <ul>
                                     {work.achievements.map((elements) => {
